@@ -3,7 +3,7 @@ const calculateTotalPoints = require('./calculateTotalPoints');
 
 //distance, hillSize, kPoint, styleNotes, windFactor, gateFactor
 
-describe('calculateTotalPoints', () => {
+describe.only('calculateTotalPoints', () => {
     describe('mamut', () => {
         it('should return 208.3 on mamut', () => {
             const actual = calculateTotalPoints(227.5, 225, 200, [18, 18.5, 17.5, 18.5, 18.5], 8.7, -8.4);
