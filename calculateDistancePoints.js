@@ -1,24 +1,22 @@
 const calculateDistancePoints = (distance, hillSize, kPoint) => {
 	let size;
 	let startpoints;
-	let distance;
 	let points;
 
 	
 	//hillsize
-	if (hillSize >= 75 && < 110) {
+	if (hillSize >= 75 && hillSize < 110) {
         size = 'normal';
-    } else if (hillSize >= 110 && < 185) {
+    } else if (hillSize >= 110 && hillSize < 185) {
         size = 'big';
     } else if (hillSize >= 185) {
         size = 'mamut';
     }
 
-    if (size = 'normal' || 'big') {
-    	startpoints = 60;
-    else {
+    if (hillSize >= 185) {
     	startpoints = 120;
-    	}
+    } else {
+    	startpoints = 60;
     }
 
     //distane
@@ -33,7 +31,7 @@ const calculateDistancePoints = (distance, hillSize, kPoint) => {
     		points = startpoints + (distancepoints * 1.8)
     		break;
     	case 'mamut':
-    		points = startpoints + (distancepoints * 1.3)
+    		points = startpoints + (distancepoints * 1.2)
     }
 
     return points;
